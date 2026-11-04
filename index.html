@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description" content="An experimental SketchUp Ruby adapter for IngeTrazo. It needs tuning, and pull requests are welcome.">
+  <title>SketchUp Adapter for IngeTrazo — Experimental, Open for Tuning</title>
+  <link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="SketchUp Adapter home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>IngeTrazo <b>/</b> Adapter Lab</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#status">Status</a>
+      <a href="#limits">Known gaps</a>
+      <a href="#contribute">Contribute</a>
+      <a class="nav-github" href="https://github.com/hamzah1985/sketchup-adapter">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> Open compatibility project</p>
+        <p class="status-tag"><span>STATUS</span> Needs tuning</p>
+        <h1>SketchUp plugins,<br><em>in progress.</em></h1>
+        <p class="lede">An experimental adapter exploring how SketchUp Ruby extensions can work inside IngeTrazo. It already runs a useful set of tools, but geometry, ownership and document behavior still need careful tuning.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/hamzah1985/sketchup-adapter/issues">Report a problem <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://github.com/hamzah1985/sketchup-adapter/pulls">Pull requests welcome <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero-note">Experimental software · not affiliated with SketchUp or plugin authors</p>
+      </div>
+      <figure class="hero-visual">
+        <div class="image-frame">
+          <img src="assets/ingetrazo-1001bit-hip-roof.jpg" alt="IngeTrazo with the 1001bit Hip Roof dialog open beside roof geometry in the model view" width="3840" height="2076">
+          <span class="image-stamp">REAL TEST SESSION <b>01 / 1001BIT</b></span>
+        </div>
+        <figcaption><span class="caption-dot"></span> Adapter testing in IngeTrazo <span class="caption-sep">·</span> 1001bit Hip Roof</figcaption>
+      </figure>
+    </section>
+
+    <section class="snapshot wrap" id="status" aria-labelledby="snapshot-title">
+      <div class="section-intro">
+        <p class="eyebrow">Current checkpoint</p>
+        <h2 id="snapshot-title">Promising tests.<br><em>Known rough edges.</em></h2>
+      </div>
+      <div class="snapshot-copy">
+        <p>The adapter translates a slice of SketchUp’s Ruby interface into IngeTrazo geometry and tools. Recent bounded checks cover the adapter’s core behavior plus selected 1001bit and open-source workflows. Passing those checks does not mean every command, model, or plugin works.</p>
+        <div class="metrics" aria-label="Latest bounded test counts">
+          <div><strong>39</strong><span>independent<br>check groups</span></div>
+          <div><strong>21</strong><span>1001bit<br>cases</span></div>
+          <div><strong>51</strong><span>open-source<br>plugin cases</span></div>
+        </div>
+        <p class="fineprint">A test count describes the specific cases run; it is not a compatibility percentage.</p>
+      </div>
+    </section>
+
+    <section class="limits-section" id="limits">
+      <div class="wrap">
+        <div class="limits-heading">
+          <div><p class="eyebrow">Where help matters</p><h2>What still needs<br><em>attention.</em></h2></div>
+          <p>Failures are part of the test plan. Clear reports and small, reproducible fixes will move this forward.</p>
+        </div>
+        <div class="limit-grid">
+          <article class="limit-card"><span class="card-index">01</span><h3>Geometry ownership</h3><p>Some nested or split edits can place faces in the wrong group or leave generated geometry disconnected.</p><span class="card-label">ACTIVE INVESTIGATION</span></article>
+          <article class="limit-card"><span class="card-index">02</span><h3>Units and document changes</h3><p>Unit changes during startup, reset or queued plugin callbacks can leave tools using stale dimensions.</p><span class="card-label">KNOWN RACE</span></article>
+          <article class="limit-card"><span class="card-index">03</span><h3>Plugin-specific behavior</h3><p>Selected Bevel and planar Cut and Fill workflows remain incomplete. Some roof output still has open boundaries.</p><span class="card-label">MORE CASES NEEDED</span></article>
+          <article class="limit-card"><span class="card-index">04</span><h3>Encrypted extensions</h3><p>Encrypted RBE extensions are not supported. A SketchUp-only API or runtime requirement can also prevent a plugin from running.</p><span class="card-label">OUT OF SCOPE TODAY</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contribute wrap" id="contribute">
+      <div class="contribute-mark" aria-hidden="true">↗</div>
+      <div class="contribute-copy">
+        <p class="eyebrow">Help tune the adapter</p>
+        <h2>Found a mismatch?<br><em>Bring a test.</em></h2>
+        <p>Issues and pull requests are welcome. A small reproducible example helps more than a broad “doesn’t work”: name the plugin and version, list the steps, and say what you expected and what happened.</p>
+        <ul class="contribute-list">
+          <li><span>01</span> Share the adapter revision and plugin version.</li>
+          <li><span>02</span> Include exact steps and measured geometry when possible.</li>
+          <li><span>03</span> Keep licensed plugin files, activation data and private models out of issues and pull requests.</li>
+        </ul>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/hamzah1985/sketchup-adapter/issues/new/choose">Open an issue <span aria-hidden="true">↗</span></a>
+          <a class="button secondary" href="https://github.com/hamzah1985/sketchup-adapter/pulls">Send a pull request <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>IngeTrazo <b>/</b> Adapter Lab</span></a>
+    <p>Independent compatibility experiment. SketchUp is a trademark of its respective owner.</p>
+    <a href="https://github.com/hamzah1985/sketchup-adapter">View the project <span aria-hidden="true">↗</span></a>
+  </footer>
+</body>
+</html>
