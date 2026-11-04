@@ -1,0 +1,50 @@
+[
+  {
+    "repo": "SketchUp/sketchup-stl",
+    "commit": "0b83322e202adb6dfaeadde41168eb88ad8f6728",
+    "branch": "main",
+    "license": "MIT"
+  },
+  {
+    "repo": "Eneroth3/eneroth-solid-tools",
+    "commit": "3b61c7473f45a2baaf6da71abc2c53fa8cfdaf22",
+    "branch": "master",
+    "license": "MIT"
+  },
+  {
+    "repo": "Eneroth3/eneroth-face-area-counter",
+    "commit": "facaf631a033cdee6c66958f248aa63cbdd354ee",
+    "branch": "master",
+    "license": "MIT"
+  },
+  {
+    "repo": "Eneroth3/eneroth-svg-exporter",
+    "commit": "312c3d8794edd2952690566e6b0224600728d4df",
+    "branch": "main",
+    "license": "MIT"
+  },
+  {
+    "repo": "Eneroth3/object-scale",
+    "commit": "9c65449e61a9b8b376544b472bc07606313beabc",
+    "branch": "master",
+    "license": "MIT"
+  },
+  {
+    "repo": "Eneroth3/component-to-group",
+    "commit": "039246f2f05a319b5489105fd946b436f0df966a",
+    "branch": "master",
+    "license": "MIT"
+  },
+  {
+    "repo": "thomthom/quadface-tools",
+    "commit": "481e6951e1a9da67a1aaa6bffd4768a7818f5a09",
+    "branch": "1.0",
+    "license": "MIT"
+  },
+  {
+    "repo": "NB70/sketchup-dxf-stl-exporter",
+    "commit": "0a1b60b3ea4bc3c83cbdb1b81f61dee77ef7904d",
+    "branch": "master",
+    "license": "Apache-2.0 in source (verify)"
+  }
+]

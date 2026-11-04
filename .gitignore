@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.test-profile/
+verification/*.log
+verification/native-profile/
+verification/preferences/
+**/rbs-format-key.bin
+verification/private/
+dist/
+# Local QA contains user paths, original plugin fixtures and private profiles.
+/verification/
+# Optional avatar motion/assets require separate redistribution consent.
+/sketchup_adapter/native_walk/assets/
+
+_site/

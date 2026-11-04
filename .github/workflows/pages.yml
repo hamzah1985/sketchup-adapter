@@ -21,14 +21,19 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the site
+      - name: Check out the project
         uses: actions/checkout@v6
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+      - name: Prepare the landing page
+        run: |
+          mkdir _site
+          cp index.html styles.css _site/
+          cp -r assets _site/
       - name: Upload the site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
       - name: Deploy the site
         id: deployment
         uses: actions/deploy-pages@v4
