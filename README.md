@@ -1,15 +1,25 @@
 # IngeTrazo SketchUp Adapter Lab
 
-A public landing page for the experimental SketchUp Ruby adapter for IngeTrazo. The adapter needs tuning: some plugin workflows fail, encrypted RBE extensions are unsupported, and pull requests are welcome.
+> **Experimental — needs tuning.** The adapter does not make every SketchUp plugin compatible. Issues and pull requests are welcome.
 
-The site is plain HTML and CSS. Its reference image is a user-provided capture of an IngeTrazo adapter test session. No plugin package or activation data is included.
+![1001bit Hip Roof test in IngeTrazo, with the plugin dialog and model geometry visible](assets/ingetrazo-1001bit-hip-roof.jpg)
+
+_Reference capture: 1001bit Hip Roof running in the IngeTrazo adapter._
+
+The adapter explores how SketchUp Ruby extensions can work inside IngeTrazo. Some tools run, while geometry, ownership and document behavior still need careful tuning. Encrypted RBE extensions are not supported.
 
 ## GitHub Pages
 
-The workflow in `.github/workflows/pages.yml` deploys the repository root whenever `main` changes and on manual runs. In repository settings, choose **Pages → Build and deployment → Source → GitHub Actions**. GitHub publishes the site at `https://hamzah1985.github.io/sketchup-adapter/` after the workflow succeeds.
+[Open the project landing page](https://hamzah1985.github.io/sketchup-adapter/).
 
-## Content
+The workflow in `.github/workflows/pages.yml` deploys the repository root when `main` changes and on manual runs.
+
+## Contributing
+
+Report reproducible behavior in [Issues](https://github.com/hamzah1985/sketchup-adapter/issues) or submit a [Pull Request](https://github.com/hamzah1985/sketchup-adapter/pulls). Include the plugin and version, adapter revision, exact steps, expected result and observed result. Please do not upload licensed plugin files, activation data or private models.
+
+## Repository files
 
 - `index.html` — project status, known gaps, test snapshot and contribution instructions
 - `styles.css` — responsive styling
-- `assets/` — logo and the supplied reference screenshot
+- `assets/` — logo and reference screenshot
